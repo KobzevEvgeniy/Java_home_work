@@ -1,19 +1,23 @@
 package org.example;
+import java.util.Random;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        System.out.printf("1. Выбросить случайное целое число в диапазоне от 0 до 2000 и сохранить в i  ");
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        int i ;
+        Random random = new Random( );
+        i= random.nextInt(2000);
+        System.out.println();
+        System.out.printf("Ответ i="+i);
+        System.out.println();
+
+        System.out.printf("2. Посчитать и сохранить в n номер старшего значащего бита выпавшего числа \n");
+        int n;
+        n=Integer.highestOneBit(i);
+        System.out.printf("Ответ n="+n);
+
     }
 }
